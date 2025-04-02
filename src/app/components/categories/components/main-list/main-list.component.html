@@ -1,0 +1,9 @@
+<div class="mt-16 mx-12 pl-8">
+  <h5 class="text-2xl font-semibold">Categorias</h5>
+
+  <ul class="mt-4 space-y-4">
+    @for (category of categories(); track category.id) {
+      <li class="text-2xl font-medium">{{ category.name }}</li>
+    }
+  </ul>
+</div>
