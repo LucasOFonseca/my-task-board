@@ -1,7 +1,7 @@
 import {
-  APP_INITIALIZER,
   EnvironmentProviders,
   inject,
+  provideAppInitializer,
   Provider,
 } from '@angular/core';
 import { ThemeService } from '../shared/services/theme.service';
@@ -16,9 +16,9 @@ function initializeTheme(): () => void {
   };
 }
 
-export const configThemeInitializerProvider: Provider | EnvironmentProviders = {
-  provide: APP_INITIALIZER,
-  useFactory: initializeTheme,
-  deps: [ThemeService],
-  multi: true,
-};
+export const configThemeInitializerProvider: Provider | EnvironmentProviders =
+  provideAppInitializer(() => {
+    const initializerFn = initializeTheme();
+
+    return initializerFn();
+  });

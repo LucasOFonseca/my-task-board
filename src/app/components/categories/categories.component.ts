@@ -3,9 +3,8 @@ import { ColorsListComponent } from './components/colors-list/colors-list.compon
 import { MainListComponent } from './components/main-list/main-list.component';
 
 @Component({
-  selector: 'app-categories',
-  standalone: true,
-  imports: [MainListComponent, ColorsListComponent],
-  templateUrl: './categories.component.html',
+    selector: 'app-categories',
+    imports: [MainListComponent, ColorsListComponent],
+    templateUrl: './categories.component.html'
 })
 export class CategoriesComponent {}

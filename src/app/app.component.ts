@@ -3,16 +3,15 @@ import { MainComponent } from './layout/main/main.component';
 import { ThemeToggleComponent } from './shared/components/theme-toggle/theme-toggle.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [ThemeToggleComponent, MainComponent],
-  template: `
+    selector: 'app-root',
+    imports: [ThemeToggleComponent, MainComponent],
+    template: `
     <div class="relative min-h-screen w-full">
       <app-theme-toggle />
 
       <app-main />
     </div>
   `,
-  styles: ``,
+    styles: ``
 })
 export class AppComponent {}

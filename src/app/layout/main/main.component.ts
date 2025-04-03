@@ -4,9 +4,8 @@ import { CategoriesComponent } from '../../components/categories/categories.comp
 import { TasksComponent } from '../../components/tasks/tasks.component';
 
 @Component({
-  selector: 'app-main',
-  standalone: true,
-  imports: [CategoriesComponent, TasksComponent, MatDividerModule],
-  templateUrl: './main.component.html',
+    selector: 'app-main',
+    imports: [CategoriesComponent, TasksComponent, MatDividerModule],
+    templateUrl: './main.component.html'
 })
 export class MainComponent {}

@@ -14,19 +14,18 @@ import { SnackBarService } from '../../../../../../shared/services/snack-bar.ser
 import { createTaskForm } from './utils/create-task-form';
 
 @Component({
-  selector: 'app-add-task-form',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatFormFieldModule,
-    MatLabel,
-    MatSelectModule,
-    MatIconModule,
-    MatInputModule,
-    FormsModule,
-    ReactiveFormsModule,
-  ],
-  templateUrl: './add-task-form.component.html',
+    selector: 'app-add-task-form',
+    imports: [
+        CommonModule,
+        MatFormFieldModule,
+        MatLabel,
+        MatSelectModule,
+        MatIconModule,
+        MatInputModule,
+        FormsModule,
+        ReactiveFormsModule,
+    ],
+    templateUrl: './add-task-form.component.html'
 })
 export class AddTaskFormComponent {
   private readonly categoryService = inject(CategoryService);
