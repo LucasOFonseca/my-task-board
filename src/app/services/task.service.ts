@@ -11,6 +11,8 @@ export class TaskService {
   readonly apiUrl = environment.apiUrl;
   private readonly httpClient = inject(HttpClient);
 
+  isLoading = signal(false);
+
   tasks = signal<Task[]>([]);
   tasksCount = computed(() => this.tasks().length);
 
