@@ -102,14 +102,18 @@ describe('TaskService', () => {
     }));
 
     it('should create a task', waitForAsync(() => {
-      service.createTask(mockedTask).subscribe(() => {
-        expect(service.tasks()[0]).toEqual(mockedTask);
+      let createdTask: Task | undefined;
+
+      service.createTask(mockedTask).subscribe(res => {
+        createdTask = res;
       });
 
       const req = httpTestController.expectOne(`${service.apiUrl}/tasks`);
 
       req.flush(mockedTask);
       expect(req.request.method).toBe('POST');
+
+      expect(createdTask).toEqual(mockedTask);
     }));
   });
 

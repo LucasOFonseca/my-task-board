@@ -1,0 +1,8 @@
+<div class="flex gap-2 mt-8 w-full">
+  <app-add-task-form class="w-full" />
+
+  <span
+    class="rounded-full w-10 h-10 {{
+      categoryBgColors[selectedCategory()?.color ?? '']
+    }} mt-2"></span>
+</div>

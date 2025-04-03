@@ -37,9 +37,7 @@ export class TaskService {
   }
 
   createTask(task: Partial<Task>): Observable<Task> {
-    return this.httpClient
-      .post<Task>(`${this.apiUrl}/tasks`, task)
-      .pipe(tap(task => this.insertTaskInTheList(task)));
+    return this.httpClient.post<Task>(`${this.apiUrl}/tasks`, task);
   }
 
   updateTaskInTheList(updatedTask: Task): void {
