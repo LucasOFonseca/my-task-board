@@ -1,0 +1,11 @@
+<div class="mt-8">
+  @if (tasks$ | async) {
+    @for (task of tasks(); track task.id) {
+      <div class="flex mb-2 items-center gap-4">
+        <p>{{ task.title }}</p>
+      </div>
+    } @empty {
+      <app-no-tasks />
+    }
+  }
+</div>
