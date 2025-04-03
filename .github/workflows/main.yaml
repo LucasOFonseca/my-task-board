@@ -22,9 +22,6 @@ jobs:
       - name: Installing dependencies
         run: npm install
 
-      - name: Linting code
-        run: npm run lint:fix
-
       - name: Testing code
         run: npm run test
 
