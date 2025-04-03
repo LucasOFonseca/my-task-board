@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { provideHttpClient } from '@angular/common/http';
+import { provideAnimations } from '@angular/platform-browser/animations';
 import { MainComponent } from './main.component';
 
 describe('MainComponent', () => {
@@ -10,7 +11,7 @@ describe('MainComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [MainComponent],
-      providers: [provideHttpClient()],
+      providers: [provideHttpClient(), provideAnimations()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MainComponent);

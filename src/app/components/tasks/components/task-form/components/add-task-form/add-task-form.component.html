@@ -6,7 +6,7 @@
   class="w-full flex gap-2 select-none"
   [formGroup]="taskForm">
   <mat-form-field class="w-full">
-    <mat-label>Tarefa</mat-label>
+    <mat-label data-testid="title">Tarefa</mat-label>
 
     <input
       matInput
@@ -18,7 +18,7 @@
   </mat-form-field>
 
   <mat-form-field>
-    <mat-label>Categoria</mat-label>
+    <mat-label data-testid="categoryId">Categoria</mat-label>
 
     <mat-select
       formControlName="categoryId"

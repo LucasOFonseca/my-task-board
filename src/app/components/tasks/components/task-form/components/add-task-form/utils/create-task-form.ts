@@ -19,7 +19,7 @@ export function createTaskForm(): FormGroup<TaskFormControl> {
       nonNullable: true,
       validators: [Validators.required, Validators.minLength(3)],
     }),
-    categoryId: new FormControl('', {
+    categoryId: new FormControl('1', {
       nonNullable: true,
       validators: [Validators.required],
     }),
